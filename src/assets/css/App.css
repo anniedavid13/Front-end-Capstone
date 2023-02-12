@@ -1,0 +1,449 @@
+:root {
+    --spacing-01: 0.8rem;
+    --spacing-02: 1.6rem;
+    --spacing-03: 2.4rem;
+    --spacing-04: 3.2rem;
+    --spacing-05: 4.0rem;
+    --spacing-06: 4.8rem;
+    --spacing-07: 5.6rem;
+    --spacing-08: 6.4rem;
+
+    --color-text: #e3e5e8;
+    --color-primary-900: #272727;
+    --color-primary-600: #646464;
+    --color-primary-200: #c8cbce;
+    --color-primary-050: rgb(242 247 245);
+    --color-primary-000: #ffffff;
+
+    --color-primary-900-60: rgb(13 15 18 / 60%);
+
+
+    --color-accent-900: rgb(30 190 114);
+    --color-accent-800: rgb(64, 204, 129);
+    --color-accent-yellow: rgb(255, 163, 0);
+
+    --title-h1: clamp(4rem,4rem + 1vw,9.6rem);
+    --title-h2: clamp(2rem,2rem + 1vw,3.2rem);
+    --title-h3: clamp(1.6rem, 1.6rem + 0.2vw, 2.8rem);
+    --title-h4: clamp(2.0rem,1rem + 1vw, 2.4rem);
+    --title-h5: clamp(1.6rem,1rem + 1vw,2.4em);
+    --title-h6: clamp(1.4rem,1rem + 1vw,1.8rem);
+    --title-line-height: 1;
+    --text-line-height: 1.5;
+    --text-small: 1.4rem;
+    --text-normal: 1.6rem;
+    --text-large: 1.8rem;
+    --pill-padding: 0.8rem 1.6rem;
+
+    --movie-brand-logo: clamp(3.2rem, 5rem + 4vw ,14rem);;
+
+    --icon-size-small: 2.4rem;
+    --icon-size-medium: 3.2rem;
+    --icon-size-large: 4.0rem;
+    --icon-size-huge: 4.8rem;
+    
+    --radius-small: 0.4rem;
+}
+.button-icon {
+    fill: var(--color-primary-300);
+}
+.background {
+    background-color: var(--color-primary-900);
+}
+html {
+    font-family: 'Poppins';
+    font-size: 62.5%;
+}
+body {
+    margin: 0;
+}
+.wrapper {
+    overflow: hidden;
+    margin: 0 var(--spacing-02);
+}
+h1 {
+    margin-block-end: 0;
+    font-size: var(--title-h1);
+    line-height: 1;
+}
+h2 {
+    font-size: var(--title-h2);
+}
+h3 {
+    color: var(--color-primary-900);
+    margin-block: var(--spacing-02);
+    font-size: var(--title-h3);
+}
+h4 {
+    color: var(--color-primary-900);
+    font-size: var(--title-h4);
+}
+span {
+    font-size: 1.4rem;
+}
+p, a, span, li {
+    line-height: var(--text-line-height);
+    font-size: 1.6rem;
+}
+label {
+    line-height: 2.4;
+    font-size: var(--text-small);
+}
+input {
+    height: 2.4rem;
+    padding: 0.8rem;
+}
+select {
+    padding: 0.8rem;
+    height: 4.4rem;
+}
+input, select {
+   width: 200px;
+}
+
+span, p, .card-genres, .footer-list-item, a, li {
+    color: var(--color-primary-600);
+}
+
+h2, h1 {
+    color: var(--color-primary-900);
+}
+button {
+    background: transparent;
+    border: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-accent-900);
+}
+.button-text {
+    font-size: var(--text-small);
+    color: var(--color-primary-000);
+    text-decoration: none;
+}
+.line {
+    display: flex;
+    align-items: center;
+    padding-left: var(--spacing-02);
+}
+.line::before {
+    content: '';
+    border-left: 0.4rem solid var(--color-accent-900);
+    height: 3.2rem;
+    position: absolute;
+    margin-left: calc(-1 * var(--spacing-02));
+}
+.flex { 
+    display: flex;
+}
+.gap01 {
+    gap: var(--spacing-01);
+}
+.list-none {
+    list-style-type: none;
+    padding-inline: 0;
+}
+.hide-menu {
+    display: none;
+}
+.button-primary {
+    height: min-content;
+    border-radius: var(--radius-small);
+    margin: var(--spacing-02) 0 var(--spacing-02) 0;
+    padding: 1.2rem 2.4rem;
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+    color: var(--color-primary-000);
+    transition: 100ms;
+    background-color: var(--color-accent-900);
+}
+.button-primary:hover {
+    color: var(--color-primary-000);
+    background-color: var(--color-accent-800);
+}
+.fill-available {
+    width: -webkit-fill-available;
+}
+.headline {
+    margin-block: var(--spacing-08) var(--spacing-06);
+    width: 100%;
+    text-align: center;
+}
+.icon-small {
+    height: var(--spacing-03);
+    width: var(--spacing-03);
+}
+header {
+    width: 100%;
+}
+
+/* -------------------- 
+NAVIGATION CSS
+-------------------- */
+
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation-menu  {
+    display: none;
+    gap: 3.2rem;
+}
+.navigation-brand {
+    margin-right: var(--spacing-04);
+}
+.navigation-menu > li {
+    text-transform: uppercase;
+}
+/* -------------------- 
+FOOTER CSS
+-------------------- */
+.footer {
+    background-color: var(--color-primary-050);
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.footer-nav > li {
+    margin-block: 0.4rem;
+}
+.footer-body  {
+    display: grid;
+    gap: var(--spacing-08);
+}
+.footer-social {
+    display: flex;
+    gap: var(--spacing-04);
+    padding-bottom: var(--spacing-04);
+    border-bottom: 1px solid var(--color-primary-100);
+}
+.footer-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-08);
+}
+.social-media {
+    margin-block: var(--spacing-04);
+}
+
+/* -------------------- 
+review CSS
+-------------------- */
+.review {
+    background-color: var(--color-primary-050);
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.review-header {
+    margin-block: var(--spacing-06);
+}
+.card-review {
+    width: 100%;
+    background-color: var(--color-primary-000);
+    padding: var(--spacing-02);
+    border-radius: var(--radius-small);
+}
+.review-cards-frame {
+    margin-block: var(--spacing-06);
+    flex-wrap: wrap;
+    display: flex;
+    gap: var(--spacing-02);
+}
+.review-title {
+    margin-block: 0;
+}
+.review-header {
+    text-align: center;
+}
+.review-subtitle {
+    font-size: var(--text-large);
+    color: var(--color-primary-600);
+    margin-block: 0.4rem 2.4rem;
+}
+.review-star {
+    fill: var(--color-accent-yellow);
+    height: 2.4rem;
+    width: auto;
+}
+.review-rating {
+    display: flex;
+    gap: var(--spacing-01);
+    margin-block: 0 var(--spacing-01);
+    align-items: center;
+}
+.review-score {
+    margin-top: 0.4rem;
+}
+.review-text {
+    color: var(--color-primary-600);
+    font-style: italic;
+}
+
+/* -------------------- 
+HERO CSS
+-------------------- */
+.hero, .display {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+.hero {
+    background-color: var(--color-primary-050);
+}
+.hero-container {
+    align-items: center;
+    display: flex;
+}
+.hero-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.focus-img {
+    width: 100%;
+    height: auto;
+}
+
+/* -------------------- 
+FEATURED CSS
+-------------------- */
+.featured {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.featured-call-to-action {
+    margin-block: var(--spacing-04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.featured-cards {
+    overflow-x: scroll;
+    display: flex;
+    gap: var(--spacing-04);
+    margin-block: 0 var(--spacing-08);
+}
+.featured-cards > .card {
+    flex: 0 0 min(80vw, 292px);
+}
+.card {
+    border: 1px solid var(--color-primary-200);
+    border-radius: 4px;
+}
+.card-body {
+    padding: var(--spacing-02);
+}
+.card-image {
+    height: auto;
+    width: 100%;
+}
+.card-header {
+    margin-block: 0 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-price {
+    font-size: var(--text-normal);
+}
+
+/* -------------------- 
+DISPLAY CSS
+-------------------- */
+
+.display-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.display-body {
+    text-align: center;
+}
+
+
+/* -------------------- 
+Booking FORM CSS
+-------------------- */
+.reservation {
+    min-height: 50vh;
+    margin-block: var(--spacing-06);
+}
+.booking-form {
+    margin-block: var(--spacing-04);
+    display: grid;
+    max-width: 200px;
+    gap: var(--spacing-04);
+}
+
+/* -------------------- 
+DESKTOP CSS
+-------------------- */
+
+@media (min-width: 1024px) {
+    .card-review {
+        width: auto;
+    }
+    .featured-cards {
+        overflow-x: unset;
+    }
+    .display-body {
+        text-align: left;
+    }
+    .display-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .review-header {
+        margin-block: var(--spacing-04);
+    }
+    .hero-body {
+        justify-content: left;
+    }
+    .navigation-menu {
+        display: flex;
+    }
+    .card-image {
+        height: 256px;
+        width: 100%;
+    }
+    .featured-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-04);
+        margin-block: 0 var(--spacing-08);
+    }
+    .booking-module {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-08);
+    }
+    .review-cards-frame {
+        display: grid;
+        gap: var(--spacing-06);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .wrapper {
+        margin: auto;
+        max-width: min(1240px, 80vw);
+    }
+    .hero-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hero-body {
+        text-align: left;
+        width: 100%;
+    }
+}
